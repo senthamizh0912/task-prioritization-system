@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Prioritization System</title>
+    <!-- Use Inter font for a modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="landing-page">
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TaskPriority</h1>
+        </div>
+        <div class="nav-links">
+            <a href="login.html" class="btn btn-outline">Login</a>
+            <a href="register.html" class="btn btn-primary">Sign Up</a>
+        </div>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Master Your Time.<br><span class="highlight">Prioritize Automatically.</span></h1>
+            <p class="hero-subtitle">Focus on what truly matters. Our smart algorithm automatically calculatestask priority based on urgency, importance, and effort.</p>
+            <div class="cta-buttons">
+                <a href="register.html" class="btn btn-primary btn-large">Get Started for Free</a>
+                <a href="#features" class="btn btn-secondary btn-large">Learn More</a>
+            </div>
+        </div>
+
+        <section id="features" class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Smart Scoring</h3>
+                <p>Tasks are automatically sorted using our custom intelligent priority calculation formula.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure by Supabase</h3>
+                <p>Enterprise-grade security and authentication powered by Supabase keeping your data safe.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Clean Interface</h3>
+                <p>A distraction-free, responsive design that works beautifully on any device.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TaskPriority System. Build better habits.</p>
+    </footer>
+
+    <!-- Supabase SDK & Auth Script (Check if user is already logged in) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script>
+        // If user is already logged in, redirect to dashboard
+        document.addEventListener("DOMContentLoaded", async () => {
+             const { data: { session } } = await window.supabaseClient.auth.getSession();
+             if (session) {
+                 window.location.href = "dashboard.html";
+             }
+        });
+    </script>
+</body>
+</html>

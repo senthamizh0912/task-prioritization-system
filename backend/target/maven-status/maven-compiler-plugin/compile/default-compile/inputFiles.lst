@@ -1,0 +1,6 @@
+D:\Task_project\backend\src\main\java\com\tasksystem\backend\model\Task.java
+D:\Task_project\backend\src\main\java\com\tasksystem\backend\repository\TaskRepository.java
+D:\Task_project\backend\src\main\java\com\tasksystem\backend\service\TaskService.java
+D:\Task_project\backend\src\main\java\com\tasksystem\backend\config\CorsConfig.java
+D:\Task_project\backend\src\main\java\com\tasksystem\backend\controller\TaskController.java
+D:\Task_project\backend\src\main\java\com\tasksystem\backend\TaskPrioritizationApplication.java
